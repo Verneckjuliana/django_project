@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+
+    <title>LOGIN</title>
+    
+</head>
+<body>
+<div class="login-page">
+    <div class="login-input-container">
+        <div class="error-message">
+            
+        </div>
+        <form action="/enviar_login" method="post">
+            <h1>Login</h1>
+            <label for="'email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+    
+            <button class="login-input-btn" type="submit">Entrar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
